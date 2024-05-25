@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>collapse</title>
+</head>
+<body>
+<p id="foo">这是一段话巴拉巴拉</p>
+<script>
+    var s = window.getSelection();
+    
+    var range = document.createRange();
+    range.selectNode(foo);
+    s.addRange(range);
+    
+    setTimeout(()=>{
+        s.collapse(foo, 1);
+    }, 1000)
+</script>
+</body>
+</html>
